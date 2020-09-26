@@ -1,0 +1,78 @@
+<?php
+
+namespace App\Entity;
+
+use App\Db\Database;
+use \PDO;
+
+class Motorista
+{
+  /**
+   * Identificador único do motorisdta
+   * @var integer
+   */
+  public $id;
+
+  /**
+   * Nome do motorista
+   * @var string
+   */
+  public $nome;
+
+  /**
+   * Email do motorista
+   * @var string
+   */
+  public $email;
+
+  /**
+   * CPF do motorista
+   * @var string
+   */
+  public $cpf;
+
+  /**
+   * Situação do motorista
+   * @var integer
+   */
+  public $situacao_id;
+
+  /**
+   * Status do motorista
+   * @var integer(0/1)
+   */
+  public $status;
+
+  /**
+   * Método responsável por cadastrar um novo motorista no banco
+   * @return boolean
+   */
+  public function cadastrar()
+  {
+    // INSERIR O MOTORISTA NO BANCO
+    $obDatabase = new Database('tb_motorista');
+    $this->id = $obDatabase->insert([
+      'nome' => $this->nome,
+      'email' => $this->email,
+      'cpf' => $this->cpf,
+      'situacao_id' => $this->situacao_id,
+      'status' => $this->status
+    ]);
+
+    // RETORNAR SUCESSO
+    return true;
+  }
+
+
+  /**
+   * Método responsável por obter os motoristas do banco de dados
+   *
+   * @param  string $where
+   * @param  string $orderl
+   * @param  string $limit
+   * @return array
+   */
+  public static function getMotoristas($where= null, $order = null, $limit = null) {
+    return (new Database('tb_motorista'))->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
+  }
+}
