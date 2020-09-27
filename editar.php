@@ -22,11 +22,11 @@ if (!$obMotorista instanceof Motorista) {
 }
 
 // VALIDAÇÃO DO POST
-if (isset($_POST['nome'], $_POST['email'], $_POST['cpf'], $_POST['situacao_id'], $_POST['status'])) {
+if (isset($_POST['nome'], $_POST['email'], $_POST['cpf'], $_POST['situacao'], $_POST['status'])) {
   $obMotorista->nome = $_POST['nome'];
   $obMotorista->email = $_POST['email'];
   $obMotorista->cpf = $_POST['cpf'];
-  $obMotorista->situacao_id = $_POST['situacao_id'];
+  $obMotorista->situacao = $_POST['situacao'];
   $obMotorista->status = $_POST['status'];
   $obMotorista->atualizar();
 

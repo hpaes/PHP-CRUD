@@ -18,7 +18,7 @@ foreach ($motoristas as $motorista) {
                       <td>' . $motorista->nome . '</td>
                       <td>' . $motorista->cpf . '</td>
                       <td>' . $motorista->email . '</td>
-                      <td>' . situ($motorista->situacao_id) . '</td>
+                      <td>' . situ($motorista->situacao) . '</td>
                       <td>' . ($motorista->status == 0 ? 'Inativo' : 'Ativo') . '</td>
                       <td>
                         <a href="editar.php?id=' . $motorista->id . '"><button type="button" class="btn btn-primary">Editar</button>

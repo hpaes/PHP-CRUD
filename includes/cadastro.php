@@ -28,11 +28,11 @@
     </div>
     <div class="col-md-2 mb-3">
       <label>Situação</label>
-      <select class="custom-select" name="situacao_id">
+      <select class="custom-select" name="situacao">
         <option selected disabled value="">Escolha...</option>
-        <option value=1 >Livre</option>
-        <option value=2 >Em curso</option>
-        <option value=3 >Retornando</option>
+        <option value="1" >Livre</option>
+        <option value="2" >Em curso</option>
+        <option value="3" >Retornando</option>
       </select>
     </div>
   </div>

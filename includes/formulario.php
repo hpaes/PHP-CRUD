@@ -28,11 +28,11 @@
     </div>
     <div class="col-md-2 mb-3">
       <label>Situação</label>
-      <select class="custom-select" name="situacao_id">
+      <select class="custom-select" name="situacao">
         <option selected disabled value="">Escolha...</option>
-        <option value=1 <?=$obMotorista->situacao_id == 1? 'selected' : ''?>>Livre</option>
-        <option value=2 <?=$obMotorista->situacao_id == 2? 'selected' : ''?>>Em curso</option>
-        <option value=3 <?=$obMotorista->situacao_id == 3? 'selected' : ''?>>Retornando</option>
+        <option value=1 <?=$obMotorista->situacao == 1? 'selected' : ''?>>Livre</option>
+        <option value=2 <?=$obMotorista->situacao == 2? 'selected' : ''?>>Em curso</option>
+        <option value=3 <?=$obMotorista->situacao == 3? 'selected' : ''?>>Retornando</option>
       </select>
     </div>
   </div>

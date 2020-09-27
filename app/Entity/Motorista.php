@@ -33,9 +33,9 @@ class Motorista
 
   /**
    * Situação do motorista
-   * @var integer
+   * @var string
    */
-  public $situacao_id;
+  public $situacao;
 
   /**
    * Status do motorista
@@ -55,7 +55,7 @@ class Motorista
       'nome' => $this->nome,
       'email' => $this->email,
       'cpf' => $this->cpf,
-      'situacao_id' => $this->situacao_id,
+      'situacao' => $this->situacao,
       'status' => $this->status
     ]);
 
@@ -73,7 +73,7 @@ class Motorista
       'nome' => $this->nome,
       'email' => $this->email,
       'cpf' => $this->cpf,
-      'situacao_id' => $this->situacao_id,
+      'situacao' => $this->situacao,
       'status' => $this->status
     ]);
   }
