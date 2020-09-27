@@ -12,8 +12,8 @@ Caso não possua, é necessário a instalação do PHP, Mysql e apache server, a
 - [Linux](https://www.apachefriends.org/xampp-files/7.4.10/xampp-linux-x64-7.4.10-0-installer.run)
 
 Em caso de dúvidas para instalação/configuração:
-- [Linux]:(https://www.apachefriends.org/faq_linux.html)
-- [Windows]:(https://www.apachefriends.org/faq_windows.html)
+- [Linux](https://www.apachefriends.org/faq_linux.html)
+- [Windows](https://www.apachefriends.org/faq_windows.html)
 
 Após a configuração correta do XAMPP ao digitar: localhost na aba do navegador é possível visualizar a página inicial do XAMPP.
 
