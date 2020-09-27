@@ -13,26 +13,26 @@
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label>Nome</label>
-      <input type="text" name="nome" class="form-control" value="<?=$obMotorista->nome?>">
+      <input type="text" name="nome" class="form-control">
     </div>
     <div class="col-md-2 mb-3">
       <label>CPF</label>
-      <input type="text" name="cpf" class="form-control" placeholder="xxx.xxx.xxx-xx" value="<?=$obMotorista->cpf?>">
+      <input type="text" name="cpf" class="form-control" placeholder="xxx.xxx.xxx-xx">
     </div>
   </div>
 
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label>E-mail</label>
-      <input type="email" class="form-control" name="email" placeholder="nome@exemplo.com" value="<?=$obMotorista->email?>">
+      <input type="email" class="form-control" name="email" placeholder="nome@exemplo.com">
     </div>
     <div class="col-md-2 mb-3">
       <label>Situação</label>
       <select class="custom-select" name="situacao_id">
         <option selected disabled value="">Escolha...</option>
-        <option value=1 <?=$obMotorista->situacao_id == 1? 'selected' : ''?>>Livre</option>
-        <option value=2 <?=$obMotorista->situacao_id == 2? 'selected' : ''?>>Em curso</option>
-        <option value=3 <?=$obMotorista->situacao_id == 3? 'selected' : ''?>>Retornando</option>
+        <option value=1 >Livre</option>
+        <option value=2 >Em curso</option>
+        <option value=3 >Retornando</option>
       </select>
     </div>
   </div>
@@ -48,7 +48,7 @@
 
       <div class="form-check form-check-inline">
         <label class="form-control">
-          <input class="form-check-input" type="radio" name="status" value=0 <?=$obMotorista->status == 0? 'checked' : ''?>> Inativo
+          <input class="form-check-input" type="radio" name="status" value=0> Inativo
         </label>
       </div>
     </div>
