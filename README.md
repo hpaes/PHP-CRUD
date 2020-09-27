@@ -10,11 +10,14 @@
 Caso não possua, é necessário a instalação do PHP, Mysql e apache server, a maneira mais simples de instalação e configuração é através do pacote XAMPP:
 - [Windows](https://www.apachefriends.org/xampp-files/7.4.10/xampp-windows-x64-7.4.10-0-VC15-installer.exe)
 - [Linux](https://www.apachefriends.org/xampp-files/7.4.10/xampp-linux-x64-7.4.10-0-installer.run)
-- [MacOS](https://www.apachefriends.org/xampp-files/7.4.10/xampp-osx-7.4.10-0-vm.dmg)
 
-Após a instalação e configuração, podemos seguir em frente
+Em caso de dúvidas para instalação/configuração:
+- [Linux]:(https://www.apachefriends.org/faq_linux.html)
+- [Windows]:(https://www.apachefriends.org/faq_windows.html)
 
-Dentro de um banco de dados de sua preferência adicione o seguinte código:
+Após a configuração correta do XAMPP ao digitar: localhost na aba do navegador é possível visualizar a página inicial do XAMPP.
+
+Dentro de editor de banco de dados de sua preferência adicione o seguinte código:
 
 1- Para criar o Database:
 
