@@ -1,11 +1,11 @@
 # Crud para cadastro de motoristas
----
+
 ### Tecnologias utilizadas
 - PHP
 - Bootstrap
 - Composer
 - MySQL
----
+
 ### Para utilização do projeto, é necessário a criação de um banco de dados:
 Caso não possua, é necessário a instalação do PHP, Mysql e apache server, a maneira mais simples de instalação e configuração é através do pacote XAMPP:
 - [Windows](https://www.apachefriends.org/xampp-files/7.4.10/xampp-windows-x64-7.4.10-0-VC15-installer.exe)
