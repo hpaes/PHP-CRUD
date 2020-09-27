@@ -18,8 +18,8 @@ Em caso de dúvidas para instalação/configuração:
 Após a configuração correta do XAMPP ao digitar: localhost na aba do navegador é possível visualizar a página inicial do XAMPP.
 
 A pasta do projeto deve ser colocada dentro da pasta htdocs:
-- Windows - xampp/htdocs/
-- Linux - /opt/lampp/htdocs/
+- Windows - <strong>xampp/htdocs/</strong>
+- Linux - <strong>/opt/lampp/htdocs/</strong>
 
 Dentro de editor de banco de dados de sua preferência adicione o seguinte código:
 
