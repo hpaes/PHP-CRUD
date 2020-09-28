@@ -1,23 +1,29 @@
 # Crud para cadastro de motoristas
 
 ### Tecnologias utilizadas
+
 - PHP
 - Bootstrap
 - Composer
 - MySQL
+---
 
-### Para utilização do projeto, é necessário a criação de um banco de dados:
+### Executando o projeto
+
 Caso não possua, é necessário a instalação do PHP, Mysql e apache server, a maneira mais simples de instalação e configuração é através do pacote XAMPP:
+
 - [Windows](https://www.apachefriends.org/xampp-files/7.4.10/xampp-windows-x64-7.4.10-0-VC15-installer.exe)
 - [Linux](https://www.apachefriends.org/xampp-files/7.4.10/xampp-linux-x64-7.4.10-0-installer.run)
 
 Em caso de dúvidas para instalação/configuração:
+
 - [Linux](https://www.apachefriends.org/faq_linux.html)
 - [Windows](https://www.apachefriends.org/faq_windows.html)
 
 Após a configuração correta do XAMPP ao digitar: localhost na aba do navegador é possível visualizar a página inicial do XAMPP.
 
 A pasta do projeto deve ser colocada dentro da pasta htdocs:
+
 - Windows - <strong>xampp/htdocs/</strong>
 - Linux - <strong>/opt/lampp/htdocs/</strong>
 
@@ -28,26 +34,30 @@ Dentro de editor de banco de dados de sua preferência adicione o seguinte códi
 ```SQL
   CREATE DATABASE `Nome da database`;
 ```
+
 2 - Criando a tabela que será utilizada no projeto:
 
 ```SQL
-  CREATE TABLE `Nome da database`.`Nome da tabela` ( 
-  `id` INT NOT NULL , 
-  `nome` VARCHAR(150) NOT NULL , 
-  `cpf` VARCHAR(14) NOT NULL , 
-  `email` VARCHAR(100) NOT NULL , 
-  `situacao` ENUM('0','1','2') NOT NULL , 
-  `status` BOOLEAN NOT NULL , 
-   PRIMARY KEY (`id`), 
-   UNIQUE (`cpf`), 
+  CREATE TABLE `Nome da database`.`Nome da tabela` (
+  `id` INT NOT NULL ,
+  `nome` VARCHAR(150) NOT NULL ,
+  `cpf` VARCHAR(14) NOT NULL ,
+  `email` VARCHAR(100) NOT NULL ,
+  `situacao` ENUM('0','1','2') NOT NULL ,
+  `status` BOOLEAN NOT NULL ,
+   PRIMARY KEY (`id`),
+   UNIQUE (`cpf`),
    UNIQUE (`email`)) ENGINE = InnoDB;
 ```
+
 ---
+
 ### Configurando a conexão com o banco de dados
+
 Para que possa ser realizada a conexão com o banco de dados criados, é necessário realizar a alteração de algumas configurações dentro do arquivo app/Db/Database.php:
 1 - Mudança dos nomes de HOST, NAME, USER e PASS:
 
-``` PHP
+```PHP
 class Database
 {
   /**
@@ -74,8 +84,10 @@ class Database
    */
   const PASS = 'Senha do usuário do banco de dados';
 ```
+
 2 - Mudança do nome da tabela no arquivo app/Entity/Motorista.php:
 Onde houver 'tb_motorista' mudar pelo nome da tabela criado por você, como por exemplo:
+
 ```PHP
 public function cadastrar()
   {
