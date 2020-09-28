@@ -39,7 +39,7 @@ class Database
   private $table;
 
   /**
-   * Instancia de conexão com o banco de dados
+   * Instância de conexão com o banco de dados
    * @var PDO
    */
   private $connection;
