@@ -38,18 +38,18 @@ Dentro de editor de banco de dados de sua preferência adicione o seguinte códi
 2 - Criando a tabela que será utilizada no projeto:
 
 ```SQL
-  CREATE TABLE `Nome da database`.`Nome da tabela` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(150) NOT NULL ,
-  `cpf` VARCHAR(14) NOT NULL ,
-  `email` VARCHAR(100) NOT NULL ,
-  `situacao` ENUM('0','1','2') NOT NULL ,
-  `status` BOOLEAN NOT NULL ,
-   PRIMARY KEY (`id`),
-   UNIQUE (`cpf`),
-   UNIQUE (`email`)) ENGINE = InnoDB;
+  CREATE TABLE `Nome da tabela` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `cpf` varchar(14) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `situacao` enum('1','2','3') COLLATE utf8mb4_general_ci NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cpf` (`cpf`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 ```
-
 ---
 
 ### Configurando a conexão com o banco de dados
