@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Db\Database;
+use App\DB\Database;
 use \PDO;
 
 class Motorista
