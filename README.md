@@ -38,6 +38,7 @@ Dentro de editor de banco de dados de sua preferência adicione o seguinte códi
 2 - Criando a tabela que será utilizada no projeto:
 
 ```SQL
+<<<<<<< HEAD
   CREATE TABLE `Nome da database`.`Nome da tabela` (
   `id` INT NOT NULL ,
   `nome` VARCHAR(150) NOT NULL ,
@@ -47,6 +48,17 @@ Dentro de editor de banco de dados de sua preferência adicione o seguinte códi
   `status` BOOLEAN NOT NULL ,
    PRIMARY KEY (`id`),
    UNIQUE (`cpf`),
+=======
+  CREATE TABLE `Nome da database`.`Nome da tabela` ( 
+  `id` INT NOT NULL AUTO_INCREMENT, 
+  `nome` VARCHAR(150) NOT NULL , 
+  `cpf` VARCHAR(14) NOT NULL , 
+  `email` VARCHAR(100) NOT NULL , 
+  `situacao` ENUM('0','1','2') NOT NULL , 
+  `status` BOOLEAN NOT NULL , 
+   PRIMARY KEY (`id`), 
+   UNIQUE (`cpf`), 
+>>>>>>> ffd71007d019e4636bc728cf6ba030e13abe20d3
    UNIQUE (`email`)) ENGINE = InnoDB;
 ```
 
