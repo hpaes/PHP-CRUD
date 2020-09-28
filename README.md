@@ -32,7 +32,7 @@ Dentro de editor de banco de dados de sua preferência adicione o seguinte códi
 
 ```SQL
   CREATE TABLE `Nome da database`.`Nome da tabela` ( 
-  `id` INT NOT NULL , 
+  `id` INT NOT NULL AUTO_INCREMENT, 
   `nome` VARCHAR(150) NOT NULL , 
   `cpf` VARCHAR(14) NOT NULL , 
   `email` VARCHAR(100) NOT NULL , 
