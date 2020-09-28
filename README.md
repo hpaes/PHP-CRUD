@@ -54,7 +54,7 @@ Dentro de editor de banco de dados de sua preferência adicione o seguinte códi
 
 ### Configurando a conexão com o banco de dados
 
-Para que possa ser realizada a conexão com o banco de dados criados, é necessário realizar a alteração de algumas configurações dentro do arquivo app/Db/Database.php:
+Para que possa ser realizada a conexão com o banco de dados criados, é necessário realizar a alteração de algumas configurações dentro do arquivo app/DB/Database.php:
 
 1 - Mudança dos nomes de HOST, NAME, USER e PASS:
 
