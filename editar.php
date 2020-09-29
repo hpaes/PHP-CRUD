@@ -6,7 +6,7 @@ define('TITLE', 'Editar motorista');
 
 use \App\Entity\Motorista;
 
-// VALIDAÇÃO O ID
+// VALIDAÇÃO DO ID
 if (!isset($_GET['id']) or !is_numeric($_GET['id'])) {
   header('location: index.php?status=error');
   exit;
