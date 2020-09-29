@@ -18,7 +18,7 @@ foreach ($motoristas as $motorista) {
                       <td>' . $motorista->nome . '</td>
                       <td>' . $motorista->cpf . '</td>
                       <td>' . $motorista->email . '</td>
-                      <td>' . situ($motorista->situacao) . '</td>
+                      <td>' . getSituacao($motorista->situacao) . '</td>
                       <td>' . ($motorista->status == 0 ? 'Inativo' : 'Ativo') . '</td>
                       <td>
                         <a href="editar.php?id=' . $motorista->id . '"><button type="button" class="btn btn-primary">Editar</button>
@@ -29,26 +29,12 @@ foreach ($motoristas as $motorista) {
                       </td>
                     </tr>';
 }
-function situ($situ_id)
-{
-  switch ($situ_id) {
-    case '1':
-      return 'Livre';
-      break;
-    case '2':
-      return 'Em curso';
-      break;
-    case '3':
-      return 'Retornando';
-      break;
-  }
-}
 
 $resultados = strlen($resultados) ? $resultados : '<tr>
-                                                      <td colspan="6" class="text-center">
-                                                        Nenhum motorista encontrado
-                                                      </td>
-                                                    </tr>';
+<td colspan="6" class="text-center">
+Nenhum motorista encontrado
+</td>
+</tr>';
 
 ?>
 
@@ -81,3 +67,27 @@ $resultados = strlen($resultados) ? $resultados : '<tr>
     </table>
   </section>
 </main>
+
+
+<?php
+
+/**
+ * Método responsável por retornar o nome das situações
+ *
+ * @param  string $situacao
+ * @return string
+ */
+function getSituacao($situacao)
+{
+  switch ($situacao) {
+    case '1':
+      return 'Livre';
+      break;
+    case '2':
+      return 'Em curso';
+      break;
+    case '3':
+      return 'Retornando';
+      break;
+  }
+}
